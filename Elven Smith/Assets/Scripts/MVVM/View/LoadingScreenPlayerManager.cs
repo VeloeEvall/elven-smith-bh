@@ -9,9 +9,6 @@ public class LoadingScreenPlayerManager : MonoBehaviour
     [SerializeField] private VideoPlayer videoPlayer;
     [SerializeField] private GameObject SavingSystemObject;
 
-    private string _sceneName = "MainMenuScene";
-    private AsyncOperation _sceneLoaderOperation;
-
     private SaveSys SavingSystem;
     private void Awake()
     {
@@ -25,6 +22,7 @@ public class LoadingScreenPlayerManager : MonoBehaviour
     {
         videoPlayer.Prepare();
         videoPlayer.loopPointReached += VideoPlayer_loopPointReached;
+        SceneLoader.StartSceneLoading("MainMenuScene");
     }
 
     private void Update()
@@ -33,27 +31,14 @@ public class LoadingScreenPlayerManager : MonoBehaviour
         {
             RawImageObject.SetActive(true);
             videoPlayer.Play();
-            StartCoroutine(LoadSceneAsyncProcess(sceneName: _sceneName));
         }
     }
 
     private void VideoPlayer_loopPointReached(VideoPlayer source)
     {
         videoPlayer.Stop();
-        _sceneLoaderOperation.allowSceneActivation = true;
+        SceneLoader.ShowSceneWhenReady();
         //SceneManager.SetActiveScene(SceneManager.GetSceneByName(_sceneName));
         //SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene().buildIndex);
-    }
-
-    private IEnumerator LoadSceneAsyncProcess(string sceneName)
-    {
-        _sceneLoaderOperation = SceneManager.LoadSceneAsync(sceneName);
-        _sceneLoaderOperation.allowSceneActivation = false;
-        while (!_sceneLoaderOperation.isDone)
-        {
-            //Debug.Log($"[scene]:{sceneName} [load progress]: {_sceneLoaderOperation.progress}");
-
-            yield return null;
-        }
     }
 }
