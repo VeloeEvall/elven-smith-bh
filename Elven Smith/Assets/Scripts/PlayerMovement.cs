@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+  
     [SerializeField]
     private GameObject player;
 
@@ -12,7 +13,12 @@ public class PlayerMovement : MonoBehaviour
 
     private float horizontal;
     private float vertical;
-
+   
+    private void Start()
+    {
+        DontDestroyOnLoad(gameObject);
+    }
+   
     private void Update()
     {
         horizontal = Input.GetAxis("Horizontal") * Time.deltaTime * speed;

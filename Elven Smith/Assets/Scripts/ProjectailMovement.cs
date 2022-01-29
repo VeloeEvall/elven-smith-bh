@@ -9,12 +9,14 @@ public class ProjectailMovement : MonoBehaviour
     private float projectailSpeed = 0.5f;
     private Vector3 destinationPosition;
     private Vector3 aimDirection;
+    
+    /*
     private void Start()
     {
         transform.position = EndOfWeaponPosition. ;
         CalculateDestination();
     }
-
+    */
     private void Update()
     {
         Shooting();
