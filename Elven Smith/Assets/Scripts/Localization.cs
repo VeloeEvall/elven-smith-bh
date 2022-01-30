@@ -4,7 +4,6 @@ using UnityEngine.UI;
 
 // ##########
 // Localization support for Elven Smith
-// DOCS: https://github.com/VeloeEvall/elven-smith/blob/main/Localization/README.md
 // ##########
 
 public class Localization : MonoBehaviour

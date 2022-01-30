@@ -1,1 +1,5 @@
-loadingscreen-title
+// Main menu buttons
+mainmenu-newgamebtn
+mainmenu-continuebtn
+mainmenu-optionsbtn
+mainmenu-quitbtn

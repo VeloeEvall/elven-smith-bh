@@ -1,1 +1,4 @@
-loadingscreen-title {Loading game... Please wait...}
+mainmenu-newgamebtn {New game}
+mainmenu-continuebtn {Continue}
+mainmenu-optionsbtn {Options}
+mainmenu-quitbtn {Quit}

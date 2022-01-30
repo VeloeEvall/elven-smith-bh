@@ -21,7 +21,7 @@ public static class LocalizationManager
         var lines = File.ReadAllLines(referencepath);
         foreach (var line in lines)
         {
-            if (line.Trim() != string.Empty)
+            if (line.Trim() != string.Empty && line.Substring(0, 2) != "//")
             {
                 _references.Add(line);
             }
