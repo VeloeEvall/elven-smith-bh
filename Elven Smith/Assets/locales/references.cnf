@@ -3,3 +3,9 @@ mainmenu-newgamebtn
 mainmenu-continuebtn
 mainmenu-optionsbtn
 mainmenu-quitbtn
+
+// Options menu buttons
+optionsmenu-backbtn
+
+// Options menu labels
+optionsmenu-title

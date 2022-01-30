@@ -8,6 +8,8 @@ using UnityEngine.UI;
 
 public class Localization : MonoBehaviour
 {
+    public bool Locked = false;
+
     [Header("Language:")]
     [SerializeField] [TextArea] private string Language = LocalizationManager.Language;
 
@@ -20,7 +22,10 @@ public class Localization : MonoBehaviour
 
     private void Awake()
     {
-        LocalizationManager.ApplyLocalisation(gameObject, TMPTextSource, TextSource, ReferenceName);
+        if(!Locked)
+        {
+            LocalizationManager.ApplyLocalisation(gameObject, TMPTextSource, TextSource, ReferenceName);
+        }
     }
 
     private void Reset()
@@ -37,15 +42,26 @@ public class Localization : MonoBehaviour
 
     private void OnValidate()
     {
-        if (LocalizationManager.Language == null)
+        if(!Locked)
         {
-            LocalizationManager.Language = "pl";
-            Language = "pl";
+            if (LocalizationManager.Language == null)
+            {
+                LocalizationManager.Language = "pl";
+                Language = "pl";
+            }
+            else if (LocalizationManager.Language != Language)
+            {
+                LocalizationManager.Language = Language;
+            }
+            LocalizationManager.ApplyLocalisation(gameObject, TMPTextSource, TextSource, ReferenceName);
         }
-        else if (LocalizationManager.Language != Language)
+    }
+
+    public void ReLocalize()
+    {
+        if(!Locked)
         {
-            LocalizationManager.Language = Language;
+            LocalizationManager.ApplyLocalisation(gameObject, TMPTextSource, TextSource, ReferenceName);
         }
-        LocalizationManager.ApplyLocalisation(gameObject, TMPTextSource, TextSource, ReferenceName);
     }
 }

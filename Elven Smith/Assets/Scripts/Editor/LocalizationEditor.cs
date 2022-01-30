@@ -18,15 +18,22 @@ public class LocalizationEditor : Editor
     {
         // Draw the default inspector
         DrawDefaultInspector();
-        _choiceIndex = EditorGUILayout.Popup("Reference name: ", _choiceIndex, _choices.ToArray(), EditorStyles.popup);
         Localization lc = (Localization)target;
-        // Update the selected choice in the underlying object
-        lc.ReferenceName = _choices[_choiceIndex];
-        // Save the changes back to the object
-        EditorUtility.SetDirty(target);
-        if(GUILayout.Button("Re-search for references"))
+        if(!lc.Locked)
         {
-            _choices = LocalizationManager.GetReferences();
+            _choiceIndex = EditorGUILayout.Popup("Reference name: ", _choiceIndex, _choices.ToArray(), EditorStyles.popup);
+            // Update the selected choice in the underlying object
+            lc.ReferenceName = _choices[_choiceIndex];
+            // Save the changes back to the object
+            EditorUtility.SetDirty(target);
+            if (GUILayout.Button("Re-search for references"))
+            {
+                _choices = LocalizationManager.GetReferences();
+            }
+            if (GUILayout.Button("Localize"))
+            {
+                lc.ReLocalize();
+            }
         }
     }
 }

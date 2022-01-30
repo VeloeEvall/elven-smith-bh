@@ -2,3 +2,5 @@ mainmenu-newgamebtn {Nowa gra}
 mainmenu-continuebtn {Kontynuuj grę}
 mainmenu-optionsbtn {Opcje}
 mainmenu-quitbtn {Wyjdź}
+optionsmenu-backbtn {Wstecz}
+optionsmenu-title {Ustawienia}
