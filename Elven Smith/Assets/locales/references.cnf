@@ -1,3 +1,4 @@
+init
 // Main menu buttons
 mainmenu-newgamebtn
 mainmenu-continuebtn
@@ -9,3 +10,9 @@ optionsmenu-backbtn
 
 // Options menu labels
 optionsmenu-title
+optionsmenu-language
+
+// Pause menu buttons
+pausemenu-backtogame
+pausemenu-backtomainmenu
+pausemenu-optionsbtn

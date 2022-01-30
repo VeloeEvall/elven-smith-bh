@@ -17,7 +17,7 @@ public class PlayerAim : MonoBehaviour
     private void Update()
     {
         Aiming();
-        Shooting();
+        //Shooting();
     }
 
     private void Aiming()

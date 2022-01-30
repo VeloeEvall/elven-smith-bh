@@ -9,6 +9,9 @@ public class PlayerMovement : MonoBehaviour
     private GameObject player;
 
     [SerializeField]
+    private GameObject PauseMenuGameObject;
+
+    [SerializeField]
     private float speed;
 
     private float horizontal;
@@ -21,6 +24,15 @@ public class PlayerMovement : MonoBehaviour
    
     private void Update()
     {
+
+        if(Input.GetButtonDown("Cancel"))
+        {
+            if(PauseMenuGameObject != null)
+            {
+                PauseMenuGameObject.SetActive(true);
+            }
+        }
+
         horizontal = Input.GetAxis("Horizontal") * Time.deltaTime * speed;
         vertical = Input.GetAxis("Vertical") * Time.deltaTime * speed;
 

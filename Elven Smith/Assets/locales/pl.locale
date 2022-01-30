@@ -1,6 +1,11 @@
+init {INIT}
 mainmenu-newgamebtn {Nowa gra}
 mainmenu-continuebtn {Kontynuuj grę}
 mainmenu-optionsbtn {Opcje}
 mainmenu-quitbtn {Wyjdź}
 optionsmenu-backbtn {Wstecz}
 optionsmenu-title {Ustawienia}
+optionsmenu-language {Język gry}
+pausemenu-backtogame {Wróć do gry}
+pausemenu-backtomainmenu {Wyjdź do menu głównego}
+pausemenu-optionsbtn {Opcje}
