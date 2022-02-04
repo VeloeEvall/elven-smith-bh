@@ -16,6 +16,8 @@ public class PlayerAim : MonoBehaviour
 
     private void Update()
     {
+        //Set End point of weapon position.z on 0
+        aimWeaponEndPoint.position = new Vector3(aimWeaponEndPoint.position.x, aimWeaponEndPoint.position.y, 0);
         Aiming();
         Shooting();
     }

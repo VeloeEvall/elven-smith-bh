@@ -7,9 +7,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 343161911, guid: 568540aee44eac446a04125682d60e23, type: 3}
+      propertyPath: m_Mass
+      value: 0.0001
+      objectReference: {fileID: 0}
     - target: {fileID: 4592440173202719329, guid: 568540aee44eac446a04125682d60e23, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 4592440173202719329, guid: 568540aee44eac446a04125682d60e23, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4592440173202719331, guid: 568540aee44eac446a04125682d60e23, type: 3}
       propertyPath: m_RootOrder
@@ -55,5 +63,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4592440173202719333, guid: 568540aee44eac446a04125682d60e23, type: 3}
+      propertyPath: projectile
+      value: 
+      objectReference: {fileID: 8272716626449561582, guid: 8923748cf2417f641a690be543f0231f, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 568540aee44eac446a04125682d60e23, type: 3}
