@@ -1712,6 +1712,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4718616046655776651, guid: 6950579d96cd0d44f83ed606294f2d03, type: 3}
+      propertyPath: projectile
+      value: 
+      objectReference: {fileID: 8272716626449561582, guid: 8923748cf2417f641a690be543f0231f, type: 3}
     - target: {fileID: 4718616046655776652, guid: 6950579d96cd0d44f83ed606294f2d03, type: 3}
       propertyPath: PauseMenuGameObject
       value: 
