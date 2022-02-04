@@ -4,33 +4,25 @@ using UnityEngine;
 
 public class ProjectailMovement : MonoBehaviour
 {
-    private Vector3 mousePosition;
+    private Vector3 mousePos;
+    private Vector3 desination;
     [SerializeField]
-    private float projectailSpeed = 0.5f;
-    private Vector3 destinationPosition;
-    private Vector3 aimDirection;
-    
-    /*
+    private float speed;
+    [SerializeField]
+    private float timeSpan;
     private void Start()
     {
-        transform.position = EndOfWeaponPosition. ;
-        CalculateDestination();
-    }
-    */
-    private void Update()
-    {
-        Shooting();
+        //Get mouse position
+        mousePos = PointPostition.GetMousePosition();
+        //Aim into direction normalized
+        desination = (mousePos - transform.position).normalized;
     }
 
-    private void Shooting()
+    void Update()
     {
-        transform.position += new Vector3(destinationPosition.x * projectailSpeed * Time.deltaTime, destinationPosition.y * projectailSpeed * Time.deltaTime, 0);
-    }
-    private void CalculateDestination()
-    {
-        //Get mouse position
-        mousePosition = PointPostition.GetMousePosition();
-        aimDirection = (mousePosition - transform.position).normalized;
-        destinationPosition = new Vector3(aimDirection.x, aimDirection.y, 0);
+        //Move toward mouse point
+        transform.position += new Vector3(desination.x * speed * Time.deltaTime, desination.y * speed * Time.deltaTime, 0);
+        //Destroy after x sec
+        Destroy(this.gameObject, timeSpan); 
     }
 }

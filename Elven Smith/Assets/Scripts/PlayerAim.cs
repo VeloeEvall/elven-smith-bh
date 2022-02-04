@@ -6,7 +6,7 @@ using System;
 public class PlayerAim : MonoBehaviour
 {
     [SerializeField]
-    private GameObject projectail;
+    private GameObject projectile;
 
     [SerializeField]
     private Transform aimTransform;
@@ -17,7 +17,7 @@ public class PlayerAim : MonoBehaviour
     private void Update()
     {
         Aiming();
-        //Shooting();
+        Shooting();
     }
 
     private void Aiming()
@@ -37,7 +37,7 @@ public class PlayerAim : MonoBehaviour
     {
         if(Input.GetMouseButtonDown(0))
         {
-            Instantiate<GameObject>(projectail);
+            Instantiate(projectile, aimWeaponEndPoint.position, aimWeaponEndPoint.rotation);
         }
     }
 }
