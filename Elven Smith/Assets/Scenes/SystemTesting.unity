@@ -813,6 +813,7 @@ GameObject:
   - component: {fileID: 565823585}
   - component: {fileID: 565823584}
   - component: {fileID: 565823587}
+  - component: {fileID: 565823589}
   - component: {fileID: 565823588}
   m_Layer: 0
   m_Name: Enemy
@@ -896,7 +897,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 565823583}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.791, y: 0, z: 0}
+  m_LocalPosition: {x: 7.21, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -932,11 +933,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 565823583}
   m_Enabled: 1
   m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3786d5de5a0a0d34fa8e9d0f86e89a81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dealDamage: 1
+--- !u!114 &565823589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 565823583}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6e1402531811b99478225fa875985cf9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 37558909}
-  moveSpeed: 5
+  moveSpeed: 10
 --- !u!1 &578561944
 GameObject:
   m_ObjectHideFlags: 0
@@ -1904,6 +1918,10 @@ PrefabInstance:
     - target: {fileID: 4718616046655776655, guid: 6950579d96cd0d44f83ed606294f2d03, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 9133375129729849817, guid: 6950579d96cd0d44f83ed606294f2d03, type: 3}
+      propertyPath: m_BodyType
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6950579d96cd0d44f83ed606294f2d03, type: 3}
