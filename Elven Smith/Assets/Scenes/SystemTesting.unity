@@ -924,7 +924,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 7
 --- !u!114 &565823588
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -964,6 +964,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42848473c11722c498e6d2575e9d95f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyMaxHealth: 5
 --- !u!1 &578561944
 GameObject:
   m_ObjectHideFlags: 0
@@ -1934,7 +1935,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9133375129729849817, guid: 6950579d96cd0d44f83ed606294f2d03, type: 3}
       propertyPath: m_BodyType
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9133375129729849817, guid: 6950579d96cd0d44f83ed606294f2d03, type: 3}
+      propertyPath: m_Constraints
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6950579d96cd0d44f83ed606294f2d03, type: 3}

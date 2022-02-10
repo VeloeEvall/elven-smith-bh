@@ -11,17 +11,14 @@ public class EnemyHealth : MonoBehaviour
     {
         enemyCurrentHealth = enemyMaxHealth;
     }
-    void Update()
-    {
-        if (enemyCurrentHealth <= 0)
-        {
-            Die();
-        }
-    }
 
     public void EnemyTakeDamage(float playerDamage)
     {
         enemyCurrentHealth -= playerDamage;
+        if (enemyCurrentHealth <= 0)
+        {
+            Die();
+        }
     }
 
     private void Die()
