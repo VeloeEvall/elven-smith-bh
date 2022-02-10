@@ -12,7 +12,7 @@ public class PlayerHealth : MonoBehaviour
     }
     void Update()
     {
-        if (playerCurrentHealth =< 0)
+        if (playerCurrentHealth <= 0)
         {
             Die();
         }
