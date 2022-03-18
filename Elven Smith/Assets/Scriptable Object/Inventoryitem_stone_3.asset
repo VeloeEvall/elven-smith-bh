@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bdc7f56f8cdd7d488e6b469bb8089f2, type: 3}
+  m_Name: Inventoryitem_stone_3
+  m_EditorClassIdentifier: 
+  id: Inventoryitem_stone_3
+  displayName: Wiekszy Kamien Mocy
+  icon: {fileID: 0}
+  prefab: {fileID: 8892981782381673478, guid: d30e276897df8be40aeafe7fb54dcb85, type: 3}
