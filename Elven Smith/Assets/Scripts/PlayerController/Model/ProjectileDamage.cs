@@ -9,6 +9,9 @@ public class ProjectileDamage : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        collision.GetComponent<EnemyHealth>().EnemyTakeDamage(projectileDmg);
+        if (collision.gameObject.layer == 7)
+        {
+            collision.GetComponent<EnemyHealth>().EnemyTakeDamage(projectileDmg);
+        }
     }
 }
