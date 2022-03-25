@@ -11,7 +11,10 @@ public class SceneChange : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("trigger");
-        SceneManager.LoadScene(3);
+        if (collision.gameObject.layer == 6)
+        {
+            Debug.Log("trigger");
+            SceneManager.LoadScene(3);
+        }
     }
 }
