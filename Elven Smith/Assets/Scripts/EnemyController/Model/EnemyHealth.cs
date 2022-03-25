@@ -26,5 +26,6 @@ public class EnemyHealth : MonoBehaviour
         GetComponent<EnemyDetection>().enabled = false;
         GetComponent<EnemyDealDamage>().enabled = false;
         Debug.Log("Œmieræ Pu³kownika");
+        Destroy(this.gameObject, 2);
     }
 }

@@ -9,7 +9,10 @@ public class EnemyDealDamage : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        AttackPlayer(collision);
+        if (collision.gameObject.layer == 6)
+        {
+            AttackPlayer(collision);
+        }
     }
 
     private void AttackPlayer(Collision2D player)
