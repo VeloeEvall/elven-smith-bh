@@ -5,7 +5,7 @@ using UnityEngine;
 public class Shoot : MonoBehaviour
 {
     [SerializeField]
-    GameObject bullet;
+    GameObject miniEnemy;
     [SerializeField]
     float time;
     [SerializeField]
@@ -21,7 +21,7 @@ public class Shoot : MonoBehaviour
 
     private void Shooting()
     {
-        Instantiate(bullet, this.gameObject.transform.position, this.gameObject.transform.rotation);
+        Instantiate(miniEnemy, this.gameObject.transform.position, this.gameObject.transform.rotation);
         time = 0;
     }
 }
