@@ -10,6 +10,8 @@ public class Shoot : MonoBehaviour
     float time;
     [SerializeField]
     float timeToShoot;
+    [SerializeField]
+    GameObject bulletSpawner;
     void Update()
     {
         time += Time.deltaTime;
@@ -21,7 +23,7 @@ public class Shoot : MonoBehaviour
 
     private void Shooting()
     {
-        Instantiate(miniEnemy, this.gameObject.transform.position, this.gameObject.transform.rotation);
+        Instantiate(miniEnemy, bulletSpawner.transform.position, bulletSpawner.transform.rotation);
         time = 0;
     }
 }

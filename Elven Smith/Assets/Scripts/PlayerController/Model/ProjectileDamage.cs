@@ -12,6 +12,7 @@ public class ProjectileDamage : MonoBehaviour
         if (collision.gameObject.layer == 7)
         {
             collision.GetComponent<EnemyHealth>().EnemyTakeDamage(projectileDmg);
+            Destroy(this.gameObject);
         }
     }
 }
